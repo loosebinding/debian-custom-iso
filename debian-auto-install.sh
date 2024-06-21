@@ -6,7 +6,7 @@ export SCRIPTDIR="/root/debian-custom-iso"
 
 export HOSTNAME=unconfigured-host
 
-export DOMAIN=managenet.lan
+export DOMAIN=ryan.lab
 
 export DEBIAN_FRONTEND=noninteractive
 
@@ -413,7 +413,7 @@ userSetup(){
 
     chroot $TEMPMOUNT /bin/bash -c "mkdir /home/$USER/.ssh"
 
-    echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB3LG8oXQJM7GzoLt50rN630vdVTeGSpYE7f6JBPSMXp ansible-ssh-key' > $TEMPMOUNT/home/"$USER"/.ssh/authorized_keys
+    echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHoPXbR00wL38QuQ/OpKLpxPY0Bxsfymc5jlB2mARYQP access@lt29' > $TEMPMOUNT/home/"$USER"/.ssh/authorized_keys
 
     chroot $TEMPMOUNT /bin/bash -c "chown -R $USER:$USER /home/$USER"
 
