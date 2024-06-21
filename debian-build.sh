@@ -195,7 +195,7 @@ sed -i '/PermitRootLogin/c\PermitRootLogin\ yes' $TEMPMOUNT/etc/ssh/sshd_config
 
 chroot $TEMPMOUNT /bin/bash -c "echo root:$LIVEROOTPASS | chpasswd"
 
-chroot $TEMPMOUNT /bin/bash -c "git clone https://github.com/samuelmcpherson/debian-custom-iso.git /root/debian-custom-iso"
+chroot $TEMPMOUNT /bin/bash -c "git clone https://github.com/loosebinding/debian-custom-iso.git /root/debian-custom-iso"
 chroot $TEMPMOUNT /bin/bash -c "apt clean"
 chroot $TEMPMOUNT /bin/bash -c "rm -rf /tmp/*"
 chroot $TEMPMOUNT /bin/bash -c "rm /etc/resolv.conf"
